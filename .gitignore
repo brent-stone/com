@@ -1,14 +1,4 @@
 .idea
-.DS_Store
-/node_modules/
-*.tsbuildinfo
-
-# React Router
-/.react-router/
-/build/
-
-# Cloudflare
-.mf
-.wrangler
-.dev.vars*
-
+.venv
+.poetry
+site/
