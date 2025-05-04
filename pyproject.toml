@@ -14,7 +14,10 @@ license = {text = "MIT"}
 readme = "README.md"
 requires-python = "<4.0,>=3.13"
 dependencies = [
-    "mkdocs-material (>=9.6.12,<10.0.0)"
+    "mkdocs-material (>=9.6.12,<10.0.0)",
+    "mkdocs-rss-plugin (>=1.17.1,<2.0.0)",
+    "mkdocstrings[python] (>=0.29.1,<0.30.0)",
+    "mkdocs-git-revision-date-localized-plugin (>=1.4.5,<2.0.0)"
 ]
 [project.urls]
 Homepage = "https://www.brent-stone.com"

@@ -8,4 +8,6 @@ The [Poetry](https://python-poetry.org/) python project and virtual environment 
 
 ```bash
 poetry env activate
+# Copy-paste the command printed
+poetry install
 ```
