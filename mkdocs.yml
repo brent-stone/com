@@ -1,5 +1,6 @@
-site_name: Brent Stone
-site_description: brent-stone.com
+site_name: Brent-Stone.com
+site_description: A technology, government, and gaming blog at brent-stone.com
+site_url: https://www.brent-stone.com
 strict: true
 repo_name: brent-stone/com
 repo_url: https://github.com/brent-stone/com
@@ -142,7 +143,9 @@ plugins:
       enabled: !ENV [CI, false]
       match_path: posts/.*
       date_from_meta:
-        as_creation: date
+        as_creation: "date"
+        as_update: "git"
+        default_timezone: America/New_York
       categories:
         - categories
         - tags
