@@ -1,7 +1,9 @@
 ---
 slug: first-post
 draft: false
-date: 2025-05-04
+date: 
+  created: 2025-05-04
+  updated: 2025-05-04
 links:
     - Brent on YouTube: https://youtube.com/brent-stone
 ---

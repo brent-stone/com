@@ -1,4 +1,4 @@
-site_name: Brent-Stone.com
+site_name: A technology blog by Brent Stone
 site_description: A technology, government, and gaming blog at brent-stone.com
 site_url: https://www.brent-stone.com
 strict: true
@@ -40,6 +40,8 @@ extra:
       link: https://www.youtube.com/brent-stone
     - icon: fontawesome/brands/github
       link: https://github.com/brent-stone
+    - icon: fontawesome/solid/rss
+      link: https://blog.brent-stone.com/feed_rss_created.xml
 
 
 copyright: >
@@ -143,12 +145,14 @@ plugins:
       enabled: !ENV [CI, false]
       match_path: posts/.*
       date_from_meta:
-        as_creation: "date"
-        as_update: "git"
+        as_creation: date.created
+        as_update: date.updated
         default_timezone: America/New_York
       categories:
         - categories
         - tags
       comments_path: "#__comments"
+      image: https://github.com/brent-stone.png
+      pretty_print: true
   - blog:
       blog_dir: .
