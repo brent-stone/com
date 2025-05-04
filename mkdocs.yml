@@ -136,8 +136,11 @@ plugins:
       type: date
       enable_creation_date: true
   - rss:
+      # https://github.com/squidfunk/mkdocs-material/discussions/7328
+      # Enable compatibility with Cloudflare Worker Python build and deployment to Cloudflare Pages
+      use_git: false
       enabled: !ENV [CI, false]
-      match_path: blog/posts/.*
+      match_path: posts/.*
       date_from_meta:
         as_creation: date
       categories:
