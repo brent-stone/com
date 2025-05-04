@@ -1,0 +1,148 @@
+site_name: Brent Stone
+site_description: brent-stone.com
+strict: true
+repo_name: brent-stone/com
+repo_url: https://github.com/brent-stone/com
+edit_uri: edit/main/docs/
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_TAG
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/thumb-up-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks! Please feel free to share additional feedback by commenting or using the
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdK2d2xkMZNlH2dP4ntBwo-91UbAK3yBbdwOf0aQHD3KkOOSA/viewform?usp=sf_url&entry.910095544={title}+-+{url}" target="_blank" rel="noopener">private feedback form</a>.
+        - icon: material/thumb-down-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Help us improve this page by commenting or using the 
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdK2d2xkMZNlH2dP4ntBwo-91UbAK3yBbdwOf0aQHD3KkOOSA/viewform?usp=sf_url&entry.910095544={title}+-+{url}" target="_blank" rel="noopener">private feedback form</a>.
+  consent:
+    title: Cookie consent
+    description: >-
+      This information will never be sold or distributed in any way. We use cookies to measure which posts you may find
+      interesting and whether you find what you're searching for. With your consent, you're helping us to make our posts
+      better meet your interests.
+
+  social:
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/brent-stone
+    - icon: fontawesome/brands/github
+      link: https://github.com/brent-stone
+
+
+copyright: >
+  Copyright &copy; 2025 Brent Stone –
+  <a href="#__consent">Change cookie settings</a>
+
+theme:
+  name: "material"
+  palette:
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    primary: blue grey
+    accent: teal
+    toggle:
+      icon: material/lightbulb-outline
+      name: "Switch to dark mode"
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    primary: blue grey
+    accent: teal
+    toggle:
+      icon: material/lightbulb
+      name: "Switch to light mode"
+  features:
+    - content.tabs.link
+    - content.code.annotate
+    - content.code.copy
+    - announce.dismiss
+    - navigation.tabs
+    - navigation.top
+    - navigation.footer
+    - content.action.view
+    - content.action.edit
+  logo: "stone.png"
+  favicon: "favicon-32x32.png"
+  custom_dir: "overrides"
+
+# https://www.mkdocs.org/user-guide/configuration/#validation
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+
+nav:
+  - index.md
+
+markdown_extensions:
+- tables
+- toc:
+    permalink: true
+    title: Page contents
+- admonition
+- pymdownx.details
+- pymdownx.superfences:
+    custom_fences:
+      - name: mermaid
+        class: mermaid
+        format: !!python/name:pymdownx.superfences.fence_code_format
+- pymdownx.highlight:
+    pygments_lang_class: true
+- pymdownx.extra
+- pymdownx.emoji:
+    emoji_index: !!python/name:material.extensions.emoji.twemoji
+    emoji_generator: !!python/name:material.extensions.emoji.to_svg
+- pymdownx.tabbed:
+    alternate_style: true
+# Enable inline HTML and CSS
+# https://squidfunk.github.io/mkdocs-material/reference/tooltips/#configuration
+- abbr
+- attr_list
+- pymdownx.snippets
+- md_in_html
+- pymdownx.inlinehilite
+- pymdownx.mark
+
+plugins:
+  - meta
+  - search
+  # https://squidfunk.github.io/mkdocs-material/plugins/offline/#config.enabled
+  - offline:
+      enabled: !ENV [MKDOCS_OFFLINE, false]
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [.]
+          options:
+            members_order: source
+            separate_signature: true
+            filters: ["!^_"]
+            docstring_options:
+              ignore_init_summary: true
+            merge_init_into_class: true
+  - git-revision-date-localized:
+      enabled: !ENV [CI, false]
+      type: date
+      enable_creation_date: true
+  - rss:
+      enabled: !ENV [CI, false]
+      match_path: blog/posts/.*
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags
+      comments_path: "#__comments"
+  - blog:
+      blog_dir: .
