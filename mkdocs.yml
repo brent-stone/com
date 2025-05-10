@@ -86,7 +86,8 @@ validation:
   unrecognized_links: warn
 
 nav:
-  - index.md
+  - Blog: index.md
+  - Topics: tags.md
 
 markdown_extensions:
 - tables
@@ -120,6 +121,8 @@ markdown_extensions:
 plugins:
   - meta
   - search
+  - tags
+  - autorefs
   # https://squidfunk.github.io/mkdocs-material/plugins/offline/#config.enabled
   - offline:
       enabled: !ENV [MKDOCS_OFFLINE, false]
