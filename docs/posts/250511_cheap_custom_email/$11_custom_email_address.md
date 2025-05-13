@@ -3,7 +3,7 @@ slug: gmail-custom-domain
 draft: false
 date:
   created: 2025-05-10
-  updated: 2025-05-10
+  updated: 2025-05-11
 tags:
   - Gmail
   - Cloudflare
