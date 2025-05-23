@@ -26,7 +26,7 @@ extra:
           name: This page could be improved
           data: 0
           note: >-
-            Thanks for your feedback! Help us improve this page by commenting or using the 
+            Thanks for your feedback! Help us improve this page by commenting or using the
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdK2d2xkMZNlH2dP4ntBwo-91UbAK3yBbdwOf0aQHD3KkOOSA/viewform?usp=sf_url&entry.910095544={title}+-+{url}" target="_blank" rel="noopener">private feedback form</a>.
   consent:
     title: Cookie consent
@@ -73,8 +73,10 @@ theme:
     - navigation.tabs
     - navigation.top
     - navigation.footer
+    - navigation.tracking
     - content.action.view
     - content.action.edit
+    - content.tooltips
   logo: "stone.png"
   favicon: "favicon-32x32.png"
   custom_dir: "overrides"
@@ -113,10 +115,15 @@ markdown_extensions:
 # https://squidfunk.github.io/mkdocs-material/reference/tooltips/#configuration
 - abbr
 - attr_list
-- pymdownx.snippets
+- pymdownx.snippets:
+    auto_append:
+      - includes/abbreviations.md
 - md_in_html
 - pymdownx.inlinehilite
 - pymdownx.mark
+- pymdownx.blocks.caption
+- def_list
+- meta
 
 plugins:
   - meta
@@ -159,3 +166,5 @@ plugins:
       pretty_print: true
   - blog:
       blog_dir: .
+  - glightbox:
+      auto_caption: true
