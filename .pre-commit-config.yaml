@@ -56,4 +56,9 @@ repos:
           - tomli
         exclude: '^.idea|^.venv|^.site'
         exclude_types: [javascript]
+    - repo: https://github.com/shssoichiro/oxipng
+      rev: v9.1.4
+      hooks:
+      - id: oxipng
+        args: [ "-o", "max", "--strip", "safe", "--alpha", "--preserve", "--recursive"]
 exclude: '(site|.venv|.idea|.github|.pytest_cache)/.*'
