@@ -11,3 +11,8 @@ poetry env activate
 # Copy-paste the command printed
 poetry install
 ```
+
+Ensure the `requirements.txt` is updated each time new dependencies are added.
+```bash
+poetry export --format requirements.txt --output requirements.txt --without-hashes
+```
