@@ -17,6 +17,7 @@
 *[K8s]: Kubernetes
 *[KV]: Key-Value
 *[LLM]: Large Language Model
+*[LLMs]: Large Language Models
 *[MVP]: Minimum Viable Product
 *[NVMe]: Non-Volatile Memory Express Solid-State Drive
 *[PC]: Personal Computer

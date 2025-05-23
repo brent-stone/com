@@ -194,9 +194,10 @@ costly than industry leaders like [Snowflake](https://www.snowflake.com/),
 [BigQuery](https://cloud.google.com/bigquery).
 
 A few other notable free or nearly free key offerings:
+
 * Cloudflare Tunnels for securely directing traffic to self-hosted API and services
-* DNS Registrar for quickly and for no cost (beyond ICANN fee) acquire domain
-  names like brent-stone.com
+* DNS Registrar that quickly and for no cost (beyond ICANN fee) acquires domain
+  names like brent-stone.com 
 * Cloudflare Pages and Workers for serverless hosting of interactive websites
 * DDoS protection
 * Zero-trust access controls to effortlessly apply a world-class layer of security
