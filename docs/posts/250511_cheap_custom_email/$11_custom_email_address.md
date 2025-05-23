@@ -3,7 +3,7 @@ slug: gmail-custom-domain
 draft: false
 date:
   created: 2025-05-10
-  updated: 2025-05-11
+  updated: 2025-05-23
 tags:
   - Gmail
   - Cloudflare
@@ -35,22 +35,22 @@ same email alias so long as you control the domain.
 1. Login to [the Cloudflare Dashboard](https://dash.cloudflare.com) and select the
    domain you'd like to use for your email alias.
 
-      ![Step 1a](1a_cloudflare_domain_select.png)
+      ![Cloudflare Dashboard](1a_cloudflare_domain_select.png){data-gallery="custom-email"}
 
 2. Enter the "Email Routing" menu
 
-      ![Step 1b](1b_cloudflare_email_select.png)
+      ![Email Routing](1b_cloudflare_email_select.png){data-gallery="custom-email"}{data-gallery="custom-email"}
 
 3. Select the "Routing rules" tab and "Create address" button to create an inbound
    email routing alias.
 
-      ![Step_1c](1c_alias_inbound_email.png){#custom_address}
+      ![Set Custom Email Address](1c_alias_inbound_email.png){#custom_address}{data-gallery="custom-email"}
 
 4. Pick what you'd like the public alias to be. Keep the `Action` as the default of
    "Send to an email" and type your free gmail address in the `Destination` field.
    You should now see an entry that looks similar to the picture above.
 
-      ![Step_1d](1d_alias_inbound_email_rule.png)
+      ![Create an Alias](1d_alias_inbound_email_rule.png){data-gallery="custom-email"}
 
 5. We'll need to include Google's information in the `TXT` DNS record cloudflare
    just created to allow the alias to be associated with your gmail account.
@@ -70,7 +70,7 @@ same email alias so long as you control the domain.
           v=spf1 include:_spf.google.com include:_spf.mx.cloudflare.net ~all
           ```
 
-      ![Step_1e](1e_dns_TXT_record_update.png)
+      ![DNS Record Update](1e_dns_TXT_record_update.png){data-gallery="custom-email"}
 
 6. Test it out. Try sending an email to yourself using the new custom email address
    as the email recipient.
@@ -87,23 +87,23 @@ same email alias so long as you control the domain.
     Create an [app password](https://security.google.com/settings/security/apppasswords)
     for your Google account.
 
-    ![Step_2b1](2b_app_password.png)
-    ![Step_2b2](2b2_app_password_screen.png){#app_password}
+    ![Create An App Password](2b_app_password.png){data-gallery="custom-email"}
+    ![Save App Password](2b2_app_password_screen.png){#app_password data-gallery="custom-email"}
 
 3. In Gmail, click the Gear :octicons-gear-16: in the top right and select "See
    all settings"
 
-    ![Step_2c](2c_gmail_settings.png)
+    ![Open Gmail Settings](2c_gmail_settings.png){data-gallery="custom-email"}
 
 4. Under the "Accounts and Import" tab click the blue link for "Add another email
    address"
 
-    ![Step_2d](2d_add_alias_gmail.png)
+    ![Gmail Settings: Add email alias](2d_add_alias_gmail.png){data-gallery="custom-email"}
 
 5. Type the name you'd like to appear in emails sent to others and the new custom email
    address you [previously setup](#custom_address) for _inbound_ traffic on Cloudflare.
 
-    ![Step_2e1](2e_gmail_alias_popup1.png)
+    ![Set email alias](2e_gmail_alias_popup1.png){data-gallery="custom-email"}
 
 6. Use the following settings to configure _outbound_ emails.
 
@@ -111,7 +111,7 @@ same email alias so long as you control the domain.
        * `Username:` your @gmail.com account (including the @gmail)
        * `Password:` The [app password](#app_password) created earlier
 
-    ![Step_2e2](2e_gmail_alias_popup2.png){#app_password_needed}
+    ![Email alias authentication](2e_gmail_alias_popup2.png){#app_password_needed data-gallery="custom-email"}
 
 ## Step Three: Test Inbound and Outbound Email
 1. Refresh the browser on the normal Gmail landing page where you read and write emails.
@@ -119,7 +119,7 @@ same email alias so long as you control the domain.
    your normal @gmail.com and your custom alias. Select the custom alias and send
    yourself a quick test email.
 
-    ![Step_3](3_test_email.png)
+    ![Test Inbound and Outbound Email](3_test_email.png){data-gallery="custom-email"}
 
 3. ?????
 4. Profit
