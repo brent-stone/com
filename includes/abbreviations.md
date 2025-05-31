@@ -3,6 +3,7 @@
 *[API]: Application Programming Interface
 *[AWS]: Amazon Web Services
 *[CDN]: Content Delivery Network
+*[CLI]: Command Line Interface
 *[CNCF]: Cloud Native Compute Foundation
 *[CPU]: Central Processing Unit
 *[CRUD]: Create, Read, Update, Delete
@@ -11,6 +12,7 @@
 *[DDoS]: Distributed Denial of Service
 *[DNS]: Domain Name Service
 *[GPU]: Graphics Processing Unit
+*[HMR]: Hot Module Replacement
 *[HTML]: Hyper Text Markup Language
 *[ICAM]: Identity, Credential, and Access Management
 *[ICANN]: Internet Corporation for Assigned Names and Numbers
@@ -20,6 +22,7 @@
 *[LLMs]: Large Language Models
 *[MVP]: Minimum Viable Product
 *[NVMe]: Non-Volatile Memory Express Solid-State Drive
+*[ORM]: Object-Relational Mapper--object oriented database management
 *[PC]: Personal Computer
 *[POC]: Proof of Concept
 *[R2]: Cloudflare R2 blob storage
