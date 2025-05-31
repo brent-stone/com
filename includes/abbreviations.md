@@ -12,6 +12,7 @@
 *[DDoS]: Distributed Denial of Service
 *[DNS]: Domain Name Service
 *[GPU]: Graphics Processing Unit
+*[HMR]: Hot Module Replacement
 *[HTML]: Hyper Text Markup Language
 *[ICAM]: Identity, Credential, and Access Management
 *[ICANN]: Internet Corporation for Assigned Names and Numbers
