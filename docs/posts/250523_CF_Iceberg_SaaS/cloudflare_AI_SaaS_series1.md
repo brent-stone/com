@@ -4,7 +4,7 @@ slug: cloudflare-ai-saas-1
 draft: false
 date:
   created: 2025-05-23
-  updated: 2025-05-23
+  updated: 2025-06-01
 tags:
   - Cloudflare
   - AI
@@ -21,6 +21,7 @@ tags:
   - Dask
   - RAPIDS
   - Data Engineering
+  - SaaS Tutorial
 links:
     - Cloudflare Dashboard: https://dash.cloudflare.com/
 ---

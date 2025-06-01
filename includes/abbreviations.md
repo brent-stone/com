@@ -30,6 +30,7 @@
 *[REST]: Representational State Transfer web communication standard
 *[S3]: Amazon Web Services Simple Storage Service
 *[SaaS]: Software as a Service
+*[SDK]: Software Development Kit
 *[SMTP]: Simple Mail Transfer Protocol
 *[STEM]: Science, Technology, Engineering, and Math
 *[SQL]: Structured Query Language

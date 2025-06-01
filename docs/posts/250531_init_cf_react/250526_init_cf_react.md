@@ -4,7 +4,7 @@ slug: init-cloudflare-react-router
 draft: false
 date:
   created: 2025-05-31
-  updated: 2025-05-31
+  updated: 2025-06-01
 tags:
   - Cloudflare
   - React Router
@@ -12,6 +12,7 @@ tags:
   - Cloudflare D1
   - Continuous Integration
   - Secrets Management
+  - SaaS Tutorial
 links:
     - React Router Templates: https://github.com/remix-run/react-router-templates/tree/main
     - CF API Tokens: https://developers.cloudflare.com/workers/wrangler/migration/v1-to-v2/wrangler-legacy/authentication/#generate-tokens
